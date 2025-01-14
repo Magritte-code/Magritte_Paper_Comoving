@@ -1,3 +1,7 @@
+This is a fork of [Magritte](https://github.com/Magritte-code/Magritte) of the version used in the (in prep.) Journal of Quantitative Spectroscopy and Radiative Transfer paper.
+After installing Magritte (see the [installation instructions](https://magritte.readthedocs.io/en/stable/0_getting_started/2_installation.html)),
+you can run the scripts and notebooks used for the paper, located in the folder /Paper/.
+
 <img src="docs/src/images/Magritte_logo_plain.svg" alt="logo" width="350"/>
 
 [![Build status](https://github.com/Magritte-code/Magritte/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Magritte-code/Magritte/actions/workflows/build-and-test.yml)
