@@ -66,7 +66,7 @@ Plots.plot!(ν, data_moving.allintensities[:, 5], label="τ=" * Formatting.sprin
 Plots.plot!(ν, data_moving.allintensities[:, 6], label="τ=" * Formatting.sprintf1("%0.1f", Δx * 5.0))
 # Plots.plot!(title="Example moving solver oscillation", xlabel="ν", ylabel="I")
 Plots.savefig("moving_oscillatory_instablity_eas.png")#for non eas, replace labels with x=...
-Plots.plot(ν, data_moving.allintensities[:, 2], label="x=" * Formatting.sprintf1("%0.1f", Δx * 1.0), xlabel = L"(ν-ν_{ij})/δν_{ij}", ylabel = "I", linewidth = 3)
+Plots.plot(ν, data_moving.allintensities[:, 2], label="x=" * Formatting.sprintf1("%0.1f", Δx * 1.0), xlabel = L"(ν-ν_{ul})/δν_{ul}", ylabel = "I", linewidth = 3)
 Plots.plot!(ν, data_moving.allintensities[:, 3], label="x=" * Formatting.sprintf1("%0.1f", Δx * 2.0), linewidth = 3)
 Plots.plot!(ν, data_moving.allintensities[:, 4], label="x=" * Formatting.sprintf1("%0.1f", Δx * 3.0), linewidth = 3)
 Plots.plot!(ν, data_moving.allintensities[:, 5], label="x=" * Formatting.sprintf1("%0.1f", Δx * 4.0), linewidth = 3)
@@ -101,7 +101,7 @@ Plots.savefig("moving_match.pdf")
 #figure out colors
 ncol = 5
 colors = ColorSchemes.tab10[1:ncol]'
-Plots.plot(ν, data_moving_match.allintensities[:, 2], label="x=" * Formatting.sprintf1("%0.1f", Δx * 1.0), color=colors[1], xlabel = L"(ν-ν_{ij})/δν_{ij}", ylabel = "I", linewidth = 3)
+Plots.plot(ν, data_moving_match.allintensities[:, 2], label="x=" * Formatting.sprintf1("%0.1f", Δx * 1.0), color=colors[1], xlabel = L"(ν-ν_{ul})/δν_{ul}", ylabel = "I", linewidth = 3)
 Plots.plot!(ν, data_moving_match.allintensities[:, 3], label="x=" * Formatting.sprintf1("%0.1f", Δx * 2.0), color=colors[2], linewidth = 3)
 Plots.plot!(ν, data_moving_match.allintensities[:, 4], label="x=" * Formatting.sprintf1("%0.1f", Δx * 3.0), color=colors[3], linewidth = 3)
 Plots.plot!(ν, data_moving_match.allintensities[:, 5], label="x=" * Formatting.sprintf1("%0.1f", Δx * 4.0), color=colors[4], linewidth = 3)

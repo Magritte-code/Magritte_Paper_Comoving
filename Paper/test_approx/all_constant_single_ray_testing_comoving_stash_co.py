@@ -2,9 +2,9 @@ import os
 import sys
 
 curdir = os.path.dirname(os.path.realpath(__file__))
-datdir = f'{curdir}/../../data/'
-moddir = f'{curdir}/../../models/'
-resdir = f'{curdir}/../../results/'
+datdir = f'{curdir}/../../tests/data/'
+moddir = f'{curdir}/../../tests/models/'
+resdir = f'{curdir}/../../tests/results/'
 
 import numpy             as np
 import matplotlib.pyplot as plt
@@ -220,7 +220,7 @@ def run_model (nosave=False):
         # plt.plot(x, u_(x), c='lightgray', zorder=0)
         plt.legend()
         # plt.xscale('log')
-        plt.xlabel('r [m]')
+        plt.xlabel('x [m]')
         plt.ylabel('Mean intensity [W/m$^{2}$]')
         plt.savefig("benchmark_intensity_CO_10_v0.png", dpi=150)
         #TODO PLOT J instead
@@ -229,7 +229,7 @@ def run_model (nosave=False):
         plt.plot(x, c*np.array(model.geometry.points.velocity)[:,0], linestyle='-')
         plt.plot(x, c*(np.array(model.geometry.points.velocity)[:,0]+max_line_width / (line_freq[0] * inv_line_width[0, 0])), linestyle='--', color='black')
         plt.plot(x, c*(np.array(model.geometry.points.velocity)[:,0]-max_line_width / (line_freq[0] * inv_line_width[0, 0])), linestyle='--', color='black')
-        plt.xlabel('r [m]')
+        plt.xlabel('x [m]')
         plt.ylabel('v [m/s]')
         plt.savefig("benchmark_velocity_co.png", dpi=150)
         #test figure
@@ -246,7 +246,7 @@ def run_model (nosave=False):
         # plt.plot(x, u_(x), c='lightgray', zorder=0)
         plt.legend()
         # plt.xscale('log')
-        plt.xlabel('r [m]')
+        plt.xlabel('x [m]')
         plt.ylabel('Normalized Mean intensity [.]')
 
         plt.show()
